@@ -4,6 +4,7 @@ const data = require('gulp-data');
 const sass = require('gulp-sass');
 const watch = require('gulp-watch');
 const browserSync = require('browser-sync').create();
+const ghPages = require('gulp-gh-pages');
 
 gulp.task('views', function buildHTML() {
   return gulp.src('src/*.pug')
@@ -17,7 +18,7 @@ gulp.task('views', function buildHTML() {
 
 gulp.task('sass', function () {
   return gulp.src('./src/**/*.scss')
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
     .pipe(gulp.dest('./public'));
 });
 
@@ -34,6 +35,11 @@ gulp.task('browser-sync', function() {
       baseDir: "./public"
     }
   });
+});
+
+gulp.task('deploy', function() {
+  return gulp.src('./public/**/*')
+    .pipe(ghPages());
 });
 
 gulp.task('default', ['watch', 'sass', 'browser-sync']);
