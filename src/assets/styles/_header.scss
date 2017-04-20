@@ -1,0 +1,47 @@
+@import "variables";
+
+.header {
+  text-align: center;
+  padding: 2em 0;
+  border-bottom: 1px solid $gray-light;
+
+  &__title {
+    color: #000;
+    font-weight: lighter;
+    line-height: .9;
+    margin-top: 0;
+    &--firstLine {
+      font-weight: bold;
+      color: $theme-color;
+      display: block;
+      font-size: 3.5em;
+
+      @media only screen and (max-width: 480px) {
+        font-size: 2em;
+      }
+    }
+    &--secondLine {
+      font-size: 1.85em;
+      @media only screen and (max-width: 480px) {
+        font-size: 1.1em;
+      }
+    }
+  }
+
+  &__intro {
+    max-width: 30em;
+    margin: 2em auto;
+    p {
+      font-size: 1.2em;
+      font-weight: lighter;
+    }
+  }
+
+  &__btn {
+    margin: 0 1em 1em;
+    cursor: pointer;
+    &:hover, &:active, &:focus {
+      cursor: pointer;
+    }
+  }
+}

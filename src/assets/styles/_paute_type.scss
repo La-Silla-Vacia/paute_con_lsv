@@ -1,0 +1,144 @@
+.paute_type {
+  display: flex;
+  margin: 0 0 6em;
+
+  @media only screen and (max-width: 768px) {
+    flex-wrap: wrap;
+  }
+
+  @media only screen and (max-width: 480px) {
+    display: block;
+  }
+
+  &__title {
+    background-color: $theme-color;
+    border-radius: $radius;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.5em;
+    width: 6em;
+    flex-grow: 0;
+
+    @media only screen and (max-width: 480px) {
+      width: 100%;
+      margin-right: 0;
+      background: transparent;
+      justify-content: flex-start;
+    }
+  }
+
+  &__title__text {
+    color: #fff;
+    transform: rotate(-90deg);
+    font-size: 3em;
+
+    @media only screen and (max-width: 480px) {
+      font-size: 2.25em;
+      transform: rotate(0);
+      margin: 0;
+      color: $theme-color;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    padding: 0 0.5em;
+
+    &:last-child {
+      padding-right: 0;
+    }
+
+    @media only screen and (max-width: 768px) {
+      width: calc(100% - 6.5em);
+      padding-right: 0;
+
+      &:last-child {
+        width: 100%;
+        margin-top: 1em;
+        padding-left: 0;
+      }
+    }
+
+    @media only screen and (max-width: 480px) {
+      padding-left: 0;
+      width: 100%;
+    }
+  }
+
+  &__box {
+    background-color: $light-bg;
+    overflow: hidden;
+    border-radius: $radius;
+    padding: 2em;
+    flex-grow: 1;
+
+    @media only screen and (max-width: 992px) {
+      padding: 1em;
+    }
+
+    @media only screen and (max-width: 480px) {
+      padding: 0.5em;
+    }
+
+    &:nth-child(2n) {
+      margin-top: 1em;
+    }
+
+    &--no_padding {
+      padding: 0;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__box__title {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 1.75em;
+    color: $light-title;
+
+    @media only screen and (max-width: 480px) {
+      font-size: 1.3em;
+    }
+  }
+
+  &__btn_container {
+    padding: 1em;
+
+    @media only screen and (max-width: 480px) {
+      padding: 0;
+    }
+  }
+
+  &__btn__title {
+    color: $theme-color;
+    font-weight: bold;
+    font-size: .9em;
+    text-transform: uppercase;
+  }
+
+  &__btn__subtitle {
+    @extend .paute_type__btn__title;
+    text-align: right;
+    color: $light-title
+  }
+
+  &__btn {
+    width: 100%;
+    font-size: 2em;
+    padding: .75em 0;
+    font-family: "Roboto Condensed", Roboto, sans-serif;
+
+    @media only screen and (max-width: 480px) {
+      font-size: 1.5em;
+      padding: .025em;
+    }
+  }
+}
