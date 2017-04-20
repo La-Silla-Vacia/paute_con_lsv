@@ -20,10 +20,15 @@
     width: 6em;
     flex-grow: 0;
 
+    @media only screen and (min-width: 480px) and (max-width: 768px) {
+      min-height: 21em;
+    }
+
     @media only screen and (max-width: 480px) {
       width: 100%;
       margin-right: 0;
       background: transparent;
+
       justify-content: flex-start;
     }
   }
