@@ -10,12 +10,14 @@
         {
           "title": "Presencia fija",
           "description": "Costo por día (CPD)",
-          "price": "$1.200.000 + IVA"
+          "price": "$1.200.000 + IVA",
+          "subtitle": "Este valor aplica terminos y condiciones"
         },
         {
-          "title": "Presencia fija",
-          "description": "Costo por día (CPD)",
-          "price": "$1.200.000 + IVA"
+          "title": "Por impresiones",
+          "description": "COSTO POR 1000 IMPRESIONES (HOME)",
+          "price": "$35.000 + IVA",
+          "subtitle": "Este valor aplica terminos y condiciones"
         }
       ],
       "image": "assets/images/home.png"
@@ -30,8 +32,8 @@
           "subtitle": "Este valor aplica terminos y condiciones"
         },
         {
-          "title": "Presencia fija",
-          "description": "Costo por día (CPD)",
+          "title": "Por impresiones",
+          "description": "COSTO POR 1000 IMPRESIONES (HOME)",
           "price": "$750.000 + IVA",
           "subtitle": "Este valor aplica terminos y condiciones"
         }
